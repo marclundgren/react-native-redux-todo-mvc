@@ -48,7 +48,7 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
 
   return (
     <View style={[_styles.container, styles.padded]}>
-      <CheckBox checkboxStyle={[_styles.checkbox]} containerStyle={_styles.checkboxContainer} style={_styles.item} label='' checked={completed} onChange={onToggle} />
+      <CheckBox checkboxStyle={_styles.checkbox} containerStyle={_styles.checkboxContainer} style={_styles.item} label='' checked={completed} onChange={onToggle} />
 
       <Text style={[_styles.text, completedStyle]}>{text}</Text>
 
