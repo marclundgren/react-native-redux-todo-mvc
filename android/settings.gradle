@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeReduxTodoMVC'
+
+include ':app'
