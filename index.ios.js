@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './app.js';
+import App from './App';
 
 AppRegistry.registerComponent('ReactNativeReduxTodoMVC', () => App);
