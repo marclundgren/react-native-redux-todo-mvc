@@ -12,7 +12,6 @@ const fontSize = 20;
 
 const _styles = StyleSheet.create({
   container: {
-    borderWidth: 1,
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
