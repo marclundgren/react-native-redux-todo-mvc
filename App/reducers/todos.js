@@ -32,7 +32,7 @@ const defaultState = [
   },
   {
     id: 99,
-    text: 'Feed Molly',
+    text: 'Feed the dog',
     completed: true
   }
 ]
