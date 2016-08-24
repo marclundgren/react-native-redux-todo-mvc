@@ -3,25 +3,28 @@ import {
   View,
   TouchableOpacity,
   Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
-
 import styles from '../styles';
-const _styles = StyleSheet.create({
+
+const componentStyles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });
 
 const ClearCompleted = ({ onClearCompleted, hasCompletedTodos }) => {
   if (!hasCompletedTodos) {
-    return (<View style={_styles.container}></View>);
+    return (<View style={componentStyles.container} />);
   }
 
   return (
-    <TouchableOpacity onPress={onClearCompleted} style={[styles.centered, styles.row, styles.backgroundSecondary]}>
+    <TouchableOpacity
+      onPress={onClearCompleted}
+      style={[styles.centered, styles.row, styles.backgroundSecondary]}
+    >
 
       <Text style={[styles.white, styles.strong, styles.centered, styles.centeredText]}>
         Clear Completed
@@ -32,7 +35,8 @@ const ClearCompleted = ({ onClearCompleted, hasCompletedTodos }) => {
 };
 
 ClearCompleted.propTypes = {
-  onClearCompleted: PropTypes.func.isRequired
+  onClearCompleted: PropTypes.func.isRequired,
+  hasCompletedTodos: PropTypes.bool.isRequired,
 };
 
 export default ClearCompleted;

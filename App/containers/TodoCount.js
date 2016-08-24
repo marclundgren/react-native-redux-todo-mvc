@@ -1,17 +1,17 @@
-import { connect } from 'react-redux'
-import TodoCount from '../components/TodoCount'
+import { connect } from 'react-redux';
+import TodoCount from '../components/TodoCount';
 
-const mapStateToProps = (state) => {
-  return {
+const mapStateToProps = (state) => (
+  {
     count: state.todos.reduce((total, todo) => {
       if (!todo.completed) {
         return total + 1;
       }
       return total;
-    }, 0)
+    }, 0),
   }
-}
+);
 
 export default connect(
   mapStateToProps
-)(TodoCount)
+)(TodoCount);

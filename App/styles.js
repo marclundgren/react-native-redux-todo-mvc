@@ -1,48 +1,15 @@
 import { StyleSheet } from 'react-native';
 import Dimensions from 'Dimensions';
-const { height, width } = Dimensions.get('window');
 
 /*
   TODO
-  larger font size
-
   DRY up this mess
-
-  research react-native fontsize ems or rems, or even pt
-
-  if there's nothing, make a library for it.
-
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
 */
 
-const fontLibrary = {
-  emConstant: 123,
-  // em = desired element pixel value / parent element font-size in pixels
-
-  remConstant: 123,
-  ptConstant: 123,
-
-  em: (value) => {
-    return value * emConstant;
-  },
-  rem: (value) => {
-    return value * remConstant;
-  },
-
-  pt: (value) => {
-    return value * ptConstant;
-  },
-
-  px: (value) => {
-    return value;
-  }
-}
-
-const primaryColor   = '#16a085';
+const primaryColor = '#16a085';
 const secondaryColor = '#e74c3c';
-const black          = '#000';
-const white          = '#fff';
-// const todoFontSize   = 28
+const black = '#000';
+const white = '#fff';
 
 export default StyleSheet.create({
   container: {
@@ -51,31 +18,29 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   column: {
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   row: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   heading: {
     textAlign: 'center',
     fontSize: 30,
-    // margin: 4,
-    // padding: 4,
-    color: primaryColor
+    color: primaryColor,
   },
   item: {
     flex: 1,
   },
   completed: {
     textDecorationLine: 'line-through',
-    textDecorationStyle: 'solid'
+    textDecorationStyle: 'solid',
   },
   padded: {
-    padding: 10
+    padding: 10,
   },
   margined: {
-    margin: 10
+    margin: 10,
   },
   bordered: {
     borderColor: black,
@@ -87,32 +52,25 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   centeredText: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   spaceBetween: {
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   primaryColor: {
-    color: primaryColor
+    color: primaryColor,
   },
   secondaryColor: {
-    color: secondaryColor
+    color: secondaryColor,
   },
   buttonPrimary: {
-    // fontSize: 14,
     borderRadius: 5,
     borderWidth: 3,
     borderColor: primaryColor,
-
-    // paddingTop: 13,
-    // paddingRight: 85,
-    // paddingBottom: 13,
-    // paddingLeft: 85,
   },
   // TODO: DRY these up
   buttonSecondary: {
-    // fontSize: 14,
     borderRadius: 5,
     borderWidth: 3,
     borderColor: secondaryColor,
@@ -123,17 +81,17 @@ export default StyleSheet.create({
   },
   buttonPrimaryText: {
     color: primaryColor,
-    fontSize: 14
+    fontSize: 14,
   },
   buttonSecondaryText: {
     color: secondaryColor,
-    fontSize: 14
+    fontSize: 14,
   },
   backgroundPrimary: {
-    backgroundColor: primaryColor
+    backgroundColor: primaryColor,
   },
   backgroundSecondary: {
-    backgroundColor: secondaryColor
+    backgroundColor: secondaryColor,
   },
   borderColorPrimary: {
     borderColor: primaryColor,
@@ -142,15 +100,15 @@ export default StyleSheet.create({
     borderColor: secondaryColor,
   },
   backgroundTertiary: {
-    backgroundColor: '#ccc'
+    backgroundColor: '#ccc',
   },
   white: {
-    color: white
+    color: white,
   },
   gray: {
     color: '#aaa',
   },
   strong: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });

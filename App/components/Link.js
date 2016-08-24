@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import {
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
 import styles from '../styles';
@@ -10,7 +10,10 @@ const Link = ({ active, children, onClick }) => {
   const activeStyle = (active ? styles.strong : null);
 
   return (
-    <TouchableOpacity onPress={onClick} style={[styles.centered, styles.row, styles.backgroundPrimary]}>
+    <TouchableOpacity
+      onPress={onClick}
+      style={[styles.centered, styles.row, styles.backgroundPrimary]}
+    >
 
       <Text style={[styles.white, styles.centered, styles.centeredText, activeStyle]}>
         {children}
@@ -18,12 +21,12 @@ const Link = ({ active, children, onClick }) => {
 
     </TouchableOpacity>
   );
-}
+};
 
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Link;

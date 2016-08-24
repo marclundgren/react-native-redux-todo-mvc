@@ -1,17 +1,19 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 import {
   View,
   TouchableOpacity,
   Text,
-  StyleSheet
 } from 'react-native';
-// import CheckBox from 'react-native-checkbox';
 import styles from '../styles';
-import Container from './Container';
 
-const ToggleTodos = ({ allTodosCompleted, hasTodos, onToggleAllInProgress, onToggleAllCompleted }) => {
+const ToggleTodos = ({
+  allTodosCompleted,
+  hasTodos,
+  onToggleAllInProgress,
+  onToggleAllCompleted,
+}) => {
   if (!hasTodos) {
-    return (<Container></Container>);
+    return (<View />);
   }
 
   const onChange = allTodosCompleted ? onToggleAllInProgress : onToggleAllCompleted;
@@ -29,7 +31,7 @@ ToggleTodos.propTypes = {
   allTodosCompleted: PropTypes.bool.isRequired,
   hasTodos: PropTypes.bool.isRequired,
   onToggleAllInProgress: PropTypes.func.isRequired,
-  onToggleAllCompleted: PropTypes.func.isRequired
+  onToggleAllCompleted: PropTypes.func.isRequired,
 };
 
 export default ToggleTodos;

@@ -1,8 +1,7 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 import {
   View,
   Text,
-  StyleSheet
 } from 'react-native';
 
 import styles from '../styles';
@@ -14,7 +13,7 @@ const TodoCount = ({ count }) => (
 );
 
 TodoCount.propTypes = {
-  count: PropTypes.number.isRequired
+  count: PropTypes.number.isRequired,
 };
 
 export default TodoCount;

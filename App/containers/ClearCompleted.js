@@ -2,19 +2,17 @@ import { connect } from 'react-redux';
 import { clearCompleted } from '../actions';
 import ClearCompleted from '../components/ClearCompleted';
 
-const mapStateToProps = ({todos}) => {
-  return {
-    hasCompletedTodos: todos.some(({completed}) => { return completed; })
-  };
-};
+const mapStateToProps = ({ todos }) => (
+  { hasCompletedTodos: todos.some(({ completed }) => (completed)) }
+);
 
-const mapDispatchToProps = (dispatch) => {
-  return {
+const mapDispatchToProps = (dispatch) => (
+  {
     onClearCompleted: () => {
       dispatch(clearCompleted());
-    }
-  };
-};
+    },
+  }
+);
 
 export default connect(
   mapStateToProps,

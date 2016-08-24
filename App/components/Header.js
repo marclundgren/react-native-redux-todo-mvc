@@ -2,12 +2,12 @@ import React from 'react';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
 import ToggleTodos from '../containers/ToggleTodos';
-
 import styles from '../styles';
-const _styles = StyleSheet.create({
+
+const componentStyles = StyleSheet.create({
   headerContainer: {
     flex: 1,
     flexDirection: 'row',
@@ -15,21 +15,21 @@ const _styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   toggleAll: {
-    flex: 3
+    flex: 3,
   },
   heading: {
-    flex: 5
+    flex: 5,
   },
   empty: {
-    flex: 3
-  }
+    flex: 3,
+  },
 });
 
 const Header = () => (
-  <View style={[_styles.headerContainer]}>
-    <View style={[_styles.empty]}></View>
-    <Text style={[_styles.heading, styles.heading]}>todos</Text>
-    <View style={[_styles.toggleAll]}>
+  <View style={[componentStyles.headerContainer]}>
+    <View style={[componentStyles.empty]} />
+    <Text style={[componentStyles.heading, styles.heading]}>todos</Text>
+    <View style={[componentStyles.toggleAll]}>
       <ToggleTodos />
     </View>
   </View>

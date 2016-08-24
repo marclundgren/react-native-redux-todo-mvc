@@ -4,7 +4,7 @@ const todo = (state = {}, action) => {
       return {
         id: action.id,
         text: action.text,
-        completed: false
+        completed: false,
       };
     case 'TOGGLE_TODO':
       if (state.id !== action.id) {
@@ -23,27 +23,23 @@ const defaultState = [
   {
     id: 97,
     text: 'Buy milk',
-    completed: false
+    completed: false,
   },
   {
     id: 98,
     text: 'Finish taxes',
-    completed: false
+    completed: false,
   },
   {
     id: 99,
     text: 'Feed the dog',
-    completed: true
-  }
-]
+    completed: true,
+  },
+];
+
 const todos = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-
-      // temp hack while debugging the onEditEnd stuff
-      if (typeof action.text === 'object') {
-        return state;
-      }
 
       if (!action.text) {
         return state;
@@ -51,7 +47,7 @@ const todos = (state = defaultState, action) => {
 
       return [
         ...state,
-        todo(undefined, action)
+        todo(undefined, action),
       ];
     case 'TOGGLE_TODO':
       return state.map(t =>
@@ -60,11 +56,8 @@ const todos = (state = defaultState, action) => {
       .sort((item) => {
         if (item.completed) {
           return 1;
-        } else {
-          return -1;
         }
-
-        // return 0;
+        return -1;
       });
     case 'TOGGLE_ALL_TODOS':
       let allCompleted = state.every((item) => {

@@ -6,7 +6,7 @@ import visibilityFilter from './visibilityFilter';
 const todoApp = combineReducers({
   inputVal,
   todos,
-  visibilityFilter
+  visibilityFilter,
 });
 
 export default todoApp;

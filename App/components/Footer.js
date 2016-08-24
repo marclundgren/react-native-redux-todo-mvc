@@ -1,25 +1,24 @@
-import React from 'react';
-import FilterLink from '../containers/FilterLink';
-import ClearCompleted from '../containers/ClearCompleted';
-
+import React, { PropTypes } from 'react';
 import {
   View,
-  Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
+import FilterLink from '../containers/FilterLink';
+import ClearCompleted from '../containers/ClearCompleted';
 import styles from '../styles';
-const _styles = StyleSheet.create({
+
+const componentStyles = StyleSheet.create({
   filtersContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   item: {
     flex: 1,
@@ -28,43 +27,46 @@ const _styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 1000,
     borderColor: 'red',
-    padding: 10
-  }
+    padding: 10,
+  },
 });
 
 
-const Filters = () => {
-  return (
-    <View style={[styles.row]}>
-      <View style={[styles.item, styles.centered]}>
-        <FilterLink filter="SHOW_ALL">
-          All
-        </FilterLink>
-      </View>
-      <View style={[styles.item, styles.centered]}>
-        <FilterLink filter="SHOW_ACTIVE">
-          Active
-        </FilterLink>
-      </View>
-      <View style={[styles.item, styles.centered]}>
-        <FilterLink filter="SHOW_COMPLETED">
-          Completed
-        </FilterLink>
-      </View>
+const Filters = () => (
+  <View style={[styles.row]}>
+    <View style={[styles.item, styles.centered]}>
+      <FilterLink filter="SHOW_ALL">
+        All
+      </FilterLink>
     </View>
-  );
-};
+    <View style={[styles.item, styles.centered]}>
+      <FilterLink filter="SHOW_ACTIVE">
+        Active
+      </FilterLink>
+    </View>
+    <View style={[styles.item, styles.centered]}>
+      <FilterLink filter="SHOW_COMPLETED">
+        Completed
+      </FilterLink>
+    </View>
+  </View>
+);
 
-const Footer = ({onClearCompleted, hasTodos}) => {
+const Footer = ({ hasTodos }) => {
   if (!hasTodos) {
-    return (<View style={[_styles.container]}></View>);
+    return (<View style={[componentStyles.container]} />);
   }
 
   return (
-    <View style={[_styles.container]}>
+    <View style={[componentStyles.container]}>
       <ClearCompleted />
       <Filters />
     </View>
   );
 };
+
+Footer.propTypes = {
+  hasTodos: PropTypes.bool.isRequired,
+};
+
 export default Footer;

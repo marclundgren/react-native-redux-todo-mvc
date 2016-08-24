@@ -2,23 +2,23 @@ import { connect } from 'react-redux';
 import { toggleAllCompleted, toggleAllInProgress } from '../actions';
 import ToggleTodos from '../components/ToggleTodos';
 
-const mapStateToProps = ({todos}) => {
-  return {
-    allTodosCompleted: todos.every(({completed}) => { return completed }),
-    hasTodos: todos.length > 0
-  };
-};
+const mapStateToProps = ({ todos }) => (
+  {
+    allTodosCompleted: todos.every(({ completed }) => (completed)),
+    hasTodos: todos.length > 0,
+  }
+);
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onToggleAllCompleted: (id) => {
+const mapDispatchToProps = (dispatch) => (
+  {
+    onToggleAllCompleted: () => (
       dispatch(toggleAllCompleted())
-    },
-    onToggleAllInProgress: (id) => {
+    ),
+    onToggleAllInProgress: () => (
       dispatch(toggleAllInProgress())
-    }
-  };
-};
+    ),
+  }
+);
 
 export default connect(
   mapStateToProps,
