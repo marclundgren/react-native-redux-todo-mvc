@@ -1,4 +1,5 @@
-// import/no-extraneous-dependencies
+/* eslint import/no-extraneous-dependencies: 0 */
+/* eslint import/no-unresolved: 0 */
 import React, { PropTypes } from 'react';
 import {
   TextInput,

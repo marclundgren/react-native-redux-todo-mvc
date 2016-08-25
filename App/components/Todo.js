@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import React, { PropTypes } from 'react';
 import CheckBox from 'react-native-checkbox';
 import {

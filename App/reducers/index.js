@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import { combineReducers } from 'redux';
 import inputVal from './inputVal';
 import todos from './todos';

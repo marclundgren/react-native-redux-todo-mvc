@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import { connect } from 'react-redux';
 import { toggleTodo, removeTodo } from '../actions';
 import TodoList from '../components/TodoList';

@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import { connect } from 'react-redux';
 import { clearCompleted } from '../actions';
 import Footer from '../components/Footer';

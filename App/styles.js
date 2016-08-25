@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import Dimensions from 'Dimensions';
 
 /*
   TODO

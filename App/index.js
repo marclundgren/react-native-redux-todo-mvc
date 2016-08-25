@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import React from 'react';

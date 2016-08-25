@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 0 */
 import { connect } from 'react-redux';
 import { toggleAllCompleted, toggleAllInProgress } from '../actions';
 import ToggleTodos from '../components/ToggleTodos';
