@@ -20,3 +20,7 @@ react-native run-ios
 ## Note:
 
 I'm developing this repo with node@v6.1.0.
+
+## Todo
+* [x] eslint passes
+* [ ] Add test coverage

@@ -59,30 +59,23 @@ const todos = (state = defaultState, action) => {
         }
         return -1;
       });
-    case 'TOGGLE_ALL_TODOS':
-      let allCompleted = state.every((item) => {
-        return item.completed;
-      });
+    case 'TOGGLE_ALL_TODOS': {
+      const allCompleted = state.every((item) => (item.completed));
 
-      return state.map(({id, text}) => {
-        return { completed: !allCompleted, id, text };
-      });
-    case 'TOGGLE_ALL_TODOS_COMPLETED':
-      return state.map(({id, text}) => {
-        return { completed: true, id, text };
-      });
-    case 'TOGGLE_ALL_TODOS_IN_PROGRESS':
-      return state.map(({id, text}) => {
-        return { completed: false, id, text };
-      });
-    case 'REMOVE_COMPLETED_TODOS':
-      return state.filter((item) => {
-        return !item.completed;
-      });
-    case 'REMOVE_TODO':
-      return state.filter((item) => {
-        return item.id !== action.id;
-      });
+      return state.map(({ id, text }) => ({ completed: !allCompleted, id, text }));
+    }
+    case 'TOGGLE_ALL_TODOS_COMPLETED': {
+      return state.map(({ id, text }) => ({ completed: true, id, text }));
+    }
+    case 'TOGGLE_ALL_TODOS_IN_PROGRESS': {
+      return state.map(({ id, text }) => ({ completed: false, id, text }));
+    }
+    case 'REMOVE_COMPLETED_TODOS': {
+      return state.filter((item) => (!item.completed));
+    }
+    case 'REMOVE_TODO': {
+      return state.filter((item) => (item.id !== action.id));
+    }
     default:
       return state;
   }
