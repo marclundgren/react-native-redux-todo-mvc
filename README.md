@@ -18,10 +18,8 @@ npm install
 react-native run-ios
 ```
 
+![Screenshot](https://cloud.githubusercontent.com/assets/1154834/18025504/418868bc-6be0-11e6-90cd-37df350b7912.png "Screenshot")
 
-## Note:
-
-I'm developing this repo with node@v6.1.0.
 
 ## Todo
 * [x] ios
