@@ -20,6 +20,9 @@ react-native run-ios
 
 ![Screenshot]](https://cloud.githubusercontent.com/assets/1154834/18025552/9b043a0a-6be1-11e6-92eb-5e80243912cb.png "Screenshot")
 
+<img width="144" alt="screen shot 2016-08-26 at 10 52 36 pm" src="https://cloud.githubusercontent.com/assets/1154834/18025552/9b043a0a-6be1-11e6-92eb-5e80243912cb.png">
+
+
 
 ## Todo
 * [x] ios
