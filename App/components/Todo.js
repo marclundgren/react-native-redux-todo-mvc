@@ -49,7 +49,9 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
         onChange={onToggle}
       />
 
-      <Text style={[componentStyles.text, completedStyle]}>{text}</Text>
+      <Text style={[componentStyles.text, completedStyle, styles.padded]}>
+        {text}
+      </Text>
 
       <TouchableOpacity
         style={[styles.item, styles.centered]}
