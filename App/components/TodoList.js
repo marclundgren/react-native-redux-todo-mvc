@@ -14,7 +14,7 @@ const componentStyles = StyleSheet.create({
     flex: 1,
   },
   clearCompletedContainer: {
-    flex: 0.2,
+    flex: 0.15,
   },
 });
 

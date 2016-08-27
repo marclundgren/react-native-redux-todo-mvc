@@ -29,7 +29,7 @@ const componentStyles = StyleSheet.create({
 const Header = () => (
   <View style={componentStyles.container}>
     <View style={styles.item} />
-    <Text style={[componentStyles.heading, styles.primaryColor]}>todos</Text>
+    <Text style={[componentStyles.heading, styles.white]}>todos</Text>
     <View style={componentStyles.toggleTodosContainer}>
       <ToggleTodos />
     </View>

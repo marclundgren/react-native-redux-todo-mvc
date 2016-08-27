@@ -17,17 +17,17 @@ const componentStyles = StyleSheet.create({
     alignItems: 'stretch',
   },
   visibleTodoList: {
-    flex: 5,
+    flex: 7,
   },
 });
 
 const App = () => (
   <View style={[componentStyles.container, styles.column]}>
-    <View style={styles.item}>
+    <View style={[styles.item, styles.backgroundPrimary]}>
       <Header />
     </View>
 
-    <View style={[styles.item, styles.centered]}>
+    <View style={[styles.item, styles.centered, styles.backgroundPrimary]}>
       <AddTodo />
     </View>
 

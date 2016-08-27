@@ -23,7 +23,7 @@ const ToggleTodos = ({
 
   return (
     <TouchableOpacity onPress={onChange}>
-      <Text style={[styles.primaryColor, styles.padded]}> {text} </Text>
+      <Text style={[styles.white, styles.padded]}> {text} </Text>
     </TouchableOpacity>
   );
 };

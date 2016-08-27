@@ -28,6 +28,7 @@ const componentStyles = StyleSheet.create({
     width: 14,
   },
   checkboxContainer: {
+    padding: 10,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -39,12 +40,12 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
   const completedStyle = (completed ? styles.completed : null);
 
   return (
-    <View style={[componentStyles.container, styles.padded]}>
+    <View style={[componentStyles.container, styles.padded, styles.bordered]}>
       <CheckBox
         checkboxStyle={componentStyles.checkbox}
         containerStyle={componentStyles.checkboxContainer}
         style={styles.item}
-        label=""
+        label={false}
         checked={completed}
         onChange={onToggle}
       />
