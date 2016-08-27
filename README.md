@@ -18,7 +18,7 @@ npm install
 react-native run-ios
 ```
 
-![Screenshot](https://cloud.githubusercontent.com/assets/1154834/18025504/418868bc-6be0-11e6-90cd-37df350b7912.png "Screenshot")
+![Screenshot]](https://cloud.githubusercontent.com/assets/1154834/18025552/9b043a0a-6be1-11e6-92eb-5e80243912cb.png "Screenshot")
 
 
 ## Todo

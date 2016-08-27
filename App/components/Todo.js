@@ -40,7 +40,7 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
   const completedStyle = (completed ? styles.completed : null);
 
   return (
-    <View style={[componentStyles.container, styles.padded, styles.bordered]}>
+    <View style={[componentStyles.container, styles.padded]}>
       <CheckBox
         checkboxStyle={componentStyles.checkbox}
         containerStyle={componentStyles.checkboxContainer}
