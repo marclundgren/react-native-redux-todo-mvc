@@ -18,18 +18,9 @@ const componentStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  item: {
-    flex: 1,
-  },
-  remove: {
-    flex: 1,
-  },
   text: {
     flex: 6,
     fontSize,
-  },
-  centered: {
-    textAlign: 'center',
   },
   checkbox: {
     flex: 1,
@@ -52,7 +43,7 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
       <CheckBox
         checkboxStyle={componentStyles.checkbox}
         containerStyle={componentStyles.checkboxContainer}
-        style={componentStyles.item}
+        style={styles.item}
         label=""
         checked={completed}
         onChange={onToggle}
@@ -61,9 +52,9 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
       <Text style={[componentStyles.text, completedStyle]}>{text}</Text>
 
       <TouchableOpacity
-        style={[componentStyles.remove, styles.backgroundTertiary]} onPress={onDestroy}
+        style={[styles.item, styles.backgroundTertiary]} onPress={onDestroy}
       >
-        <Text style={[componentStyles.centered, styles.padded, styles.white]}>x</Text>
+        <Text style={[styles.centeredText, styles.padded, styles.white]}>x</Text>
       </TouchableOpacity>
     </View>
   );

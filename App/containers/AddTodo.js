@@ -15,6 +15,11 @@ const mapDispatchToProps = (dispatch) => (
     addTodo: (text) => {
       dispatch(addTodo(text));
       dispatch(setInputValue(''));
+
+      /*
+      setTimeout(() => {
+      }, 100);
+      */
     },
   }
 );

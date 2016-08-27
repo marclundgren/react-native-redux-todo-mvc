@@ -4,21 +4,12 @@ import {
   View,
   TouchableOpacity,
   Text,
-  StyleSheet,
 } from 'react-native';
 import styles from '../styles';
 
-const componentStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
-
 const ClearCompleted = ({ onClearCompleted, hasCompletedTodos }) => {
   if (!hasCompletedTodos) {
-    return (<View style={componentStyles.container} />);
+    return (<View style={styles.container} />);
   }
 
   return (

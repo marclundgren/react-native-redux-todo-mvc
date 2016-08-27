@@ -10,11 +10,6 @@ import styles from '../styles';
 
 const { width } = Dimensions.get('window');
 const componentStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'stretch',
-  },
   input: {
     flex: 1,
     alignSelf: 'center',

@@ -16,34 +16,26 @@ const componentStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
   },
-  header: {
-    flex: 1,
-    marginTop: 10,
-  },
-  addTodo: { flex: 1 },
   visibleTodoList: { flex: 5 },
-  footer: { flex: 1 },
 });
 
 const App = () => (
   <View style={[componentStyles.container, styles.column]}>
-
-    <View style={[componentStyles.header]}>
+    <View style={styles.item}>
       <Header />
     </View>
 
-    <View style={[componentStyles.addTodo, styles.centered]}>
+    <View style={[styles.item, styles.centered]}>
       <AddTodo />
     </View>
 
-    <View style={[componentStyles.visibleTodoList]}>
+    <View style={componentStyles.visibleTodoList}>
       <VisibleTodoList style={styles.column} />
     </View>
 
-    <View style={[componentStyles.footer]}>
+    <View style={styles.item}>
       <Footer />
     </View>
-
   </View>
 );
 

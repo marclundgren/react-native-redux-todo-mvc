@@ -2,39 +2,13 @@
 import React, { PropTypes } from 'react';
 import {
   View,
-  StyleSheet,
 } from 'react-native';
 import FilterLink from '../containers/FilterLink';
 import ClearCompleted from '../containers/ClearCompleted';
 import styles from '../styles';
 
-const componentStyles = StyleSheet.create({
-  filtersContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-  },
-  item: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderRadius: 1000,
-    borderColor: 'red',
-    padding: 10,
-  },
-});
-
-
 const Filters = () => (
-  <View style={[styles.row]}>
+  <View style={[styles.item, styles.row]}>
     <View style={[styles.item, styles.centered]}>
       <FilterLink filter="SHOW_ALL">
         All
@@ -55,11 +29,11 @@ const Filters = () => (
 
 const Footer = ({ hasTodos }) => {
   if (!hasTodos) {
-    return (<View style={[componentStyles.container]} />);
+    return (<View style={[styles.container, styles.column]} />);
   }
 
   return (
-    <View style={[componentStyles.container]}>
+    <View style={[styles.container, styles.column]}>
       <ClearCompleted />
       <Filters />
     </View>

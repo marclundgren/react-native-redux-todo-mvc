@@ -13,7 +13,7 @@ const Link = ({ active, children, onClick }) => {
   return (
     <TouchableOpacity
       onPress={onClick}
-      style={[styles.centered, styles.row, styles.backgroundPrimary]}
+      style={[styles.centered, styles.item, styles.row, styles.backgroundPrimary]}
     >
 
       <Text style={[styles.white, styles.centered, styles.centeredText, activeStyle]}>

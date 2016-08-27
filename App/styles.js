@@ -1,14 +1,10 @@
 import { StyleSheet } from 'react-native';
 
-/*
-  TODO
-  DRY up this mess
-*/
-
 const primaryColor = '#16a085';
 const secondaryColor = '#e74c3c';
 const black = '#000';
 const white = '#fff';
+const gray = '#aaa';
 
 export default StyleSheet.create({
   container: {
@@ -20,13 +16,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
   },
   row: {
-    flex: 1,
     flexDirection: 'row',
-  },
-  heading: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: primaryColor,
   },
   item: {
     flex: 1,
@@ -63,29 +53,6 @@ export default StyleSheet.create({
   secondaryColor: {
     color: secondaryColor,
   },
-  buttonPrimary: {
-    borderRadius: 5,
-    borderWidth: 3,
-    borderColor: primaryColor,
-  },
-  // TODO: DRY these up
-  buttonSecondary: {
-    borderRadius: 5,
-    borderWidth: 3,
-    borderColor: secondaryColor,
-    paddingTop: 13,
-    paddingRight: 85,
-    paddingBottom: 13,
-    paddingLeft: 85,
-  },
-  buttonPrimaryText: {
-    color: primaryColor,
-    fontSize: 14,
-  },
-  buttonSecondaryText: {
-    color: secondaryColor,
-    fontSize: 14,
-  },
   backgroundPrimary: {
     backgroundColor: primaryColor,
   },
@@ -95,9 +62,6 @@ export default StyleSheet.create({
   borderColorPrimary: {
     borderColor: primaryColor,
   },
-  borderColorSecondary: {
-    borderColor: secondaryColor,
-  },
   backgroundTertiary: {
     backgroundColor: '#ccc',
   },
@@ -105,7 +69,7 @@ export default StyleSheet.create({
     color: white,
   },
   gray: {
-    color: '#aaa',
+    color: gray,
   },
   strong: {
     fontWeight: 'bold',
