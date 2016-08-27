@@ -14,6 +14,7 @@ const componentStyles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     padding: 10,
+    marginBottom: 20,
     width: (width * 0.75), // temp hack. use flexbox instead
   },
 });
