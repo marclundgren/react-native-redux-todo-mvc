@@ -28,6 +28,7 @@ const AddTodo = ({ inputVal, changeInputVal, addTodo }) => (
     placeholder="What needs to be done?"
     style={[componentStyles.input, styles.bordered, styles.borderColorPrimary]}
     returnKeyType="done"
+    value={inputVal}
     onChangeText={(text) => changeInputVal(text)}
     onEndEditing={() => addTodo(inputVal)}
   />
