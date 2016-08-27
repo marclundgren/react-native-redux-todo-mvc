@@ -9,7 +9,7 @@ import styles from '../styles';
 
 const ClearCompleted = ({ onClearCompleted, hasCompletedTodos }) => {
   if (!hasCompletedTodos) {
-    return (<View style={styles.container} />);
+    return (<View />);
   }
 
   return (

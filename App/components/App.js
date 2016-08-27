@@ -16,7 +16,9 @@ const componentStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
   },
-  visibleTodoList: { flex: 5 },
+  visibleTodoList: {
+    flex: 5,
+  },
 });
 
 const App = () => (

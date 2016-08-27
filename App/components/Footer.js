@@ -4,7 +4,6 @@ import {
   View,
 } from 'react-native';
 import FilterLink from '../containers/FilterLink';
-import ClearCompleted from '../containers/ClearCompleted';
 import styles from '../styles';
 
 const Filters = () => (
@@ -34,7 +33,6 @@ const Footer = ({ hasTodos }) => {
 
   return (
     <View style={[styles.container, styles.column]}>
-      <ClearCompleted />
       <Filters />
     </View>
   );
