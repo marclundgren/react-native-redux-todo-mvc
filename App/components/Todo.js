@@ -52,9 +52,12 @@ const Todo = ({ onToggle, onDestroy, completed, text }) => {
       <Text style={[componentStyles.text, completedStyle]}>{text}</Text>
 
       <TouchableOpacity
-        style={[styles.item, styles.backgroundTertiary]} onPress={onDestroy}
+        style={[styles.item, styles.centered]}
+        onPress={onDestroy}
       >
-        <Text style={[styles.centeredText, styles.padded, styles.white]}>x</Text>
+        <Text style={[styles.centeredText, styles.padded, styles.gray, styles.borderColorTertiary]}>
+          x
+        </Text>
       </TouchableOpacity>
     </View>
   );

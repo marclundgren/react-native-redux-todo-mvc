@@ -22,7 +22,11 @@ const componentStyles = StyleSheet.create({
 const AddTodo = ({ inputVal, changeInputVal, addTodo }) => (
   <TextInput
     placeholder="What needs to be done?"
-    style={[componentStyles.input, styles.bordered, styles.borderColorPrimary]}
+    style={[
+      componentStyles.input,
+      styles.bordered,
+      styles.borderColorWhite,
+      styles.backgroundTertiary]}
     returnKeyType="done"
     value={inputVal}
     onChangeText={(text) => changeInputVal(text)}

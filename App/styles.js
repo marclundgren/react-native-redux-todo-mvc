@@ -62,6 +62,12 @@ export default StyleSheet.create({
   borderColorPrimary: {
     borderColor: primaryColor,
   },
+  borderColorTertiary: {
+    borderColor: gray,
+  },
+  borderColorWhite: {
+    borderColor: white,
+  },
   backgroundTertiary: {
     backgroundColor: '#ccc',
   },
