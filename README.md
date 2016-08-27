@@ -1,5 +1,7 @@
 # react-native-redux-todo-mvc
 
+`react-native-redux-todo-mvc` is a mobile app that features all the [todomvc requirements](https://github.com/tastejs/todomvc/blob/master/app-spec.md#functionality).
+
 ## Dependencies
 
 ```
