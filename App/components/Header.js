@@ -20,15 +20,18 @@ const componentStyles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
   },
+  empty: {
+    flex: 1,
+  },
   toggleTodosContainer: {
     flex: 1,
-    alignItems: 'flex-end',
+    alignItems: 'center',
   },
 });
 
 const Header = () => (
   <View style={componentStyles.container}>
-    <View style={styles.item} />
+    <View style={componentStyles.empty} />
     <Text style={[componentStyles.heading, styles.white]}>todos</Text>
     <View style={componentStyles.toggleTodosContainer}>
       <ToggleTodos />
