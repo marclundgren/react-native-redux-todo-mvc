@@ -6,7 +6,7 @@ import React from 'react';
 import App from './components/App';
 import todoApp from './reducers';
 
-let store = createStore(todoApp);
+const store = createStore(todoApp);
 
 const ReactNativeReduxTodoMVC = () => (
   <Provider store={store}>
