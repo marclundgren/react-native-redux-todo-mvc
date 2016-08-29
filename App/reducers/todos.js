@@ -52,13 +52,7 @@ const todos = (state = defaultState, action) => {
     case 'TOGGLE_TODO':
       return state.map(t =>
         todo(t, action)
-      )
-      .sort((item) => {
-        if (item.completed) {
-          return 1;
-        }
-        return -1;
-      });
+      );
     case 'TOGGLE_ALL_TODOS': {
       const allCompleted = state.every((item) => (item.completed));
 
